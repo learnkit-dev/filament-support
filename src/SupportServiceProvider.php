@@ -8,7 +8,6 @@ use LearnKit\Support\Models\Concerns\HasSupportAccess;
 use LearnKit\Support\Settings\SupportSettings;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use LearnKit\Support\Commands\SupportCommand;
 
 class SupportServiceProvider extends PackageServiceProvider
 {
