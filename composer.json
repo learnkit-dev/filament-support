@@ -1,24 +1,26 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "learnkit/filament-support",
+    "description": "This is my package filament-support",
     "keywords": [
-        ":vendor_name",
+        "LearnKit",
         "laravel",
-        ":package_slug"
+        "filament-support"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/learnkit/filament-support",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Sebastiaan Kloos",
+            "email": "sebastiaan@learnkit.dev",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
         "spatie/laravel-package-tools": "^1.13.0",
-        "illuminate/contracts": "^9.0"
+        "illuminate/contracts": "^9.0",
+        "filament/filament": "^v2.16.0",
+        "filament/spatie-laravel-settings-plugin": "^2.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -35,13 +37,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "LearnKit\\Support\\": "src/",
+            "LearnKit\\Support\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "LearnKit\\Support\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -52,22 +54,9 @@
         "format": "vendor/bin/pint"
     },
     "config": {
-        "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
